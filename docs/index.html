@@ -10,7 +10,7 @@
 </head>
 <body class="dark">
     <header class="">
-        <nav class="z-99 fixed top-0 left-0 bg-neutral-200 w-screen h-[10vh] flex justify-between items-center px-2 md:px-10 dark:bg-black dark:text-neutral-200">
+        <nav class="z-99 fixed top-0 left-0 bg-neutral-300 w-screen h-[10vh] flex justify-between items-center px-2 md:px-10 dark:bg-black dark:text-neutral-300">
             <div class="flex">
                 <img class="w-8 inline" src="images/todo-logo.png" alt="">
                 <h1 class="text-2xl text-[#195bbc] font-semibold dark:text-[#44a8ed]">todofy</h1>
@@ -75,12 +75,26 @@
                 </div>
 
             </aside>
-            <div class="w-full bg-amber-300 py-20">
-                <div>
+            <div class="w-screen min-h-screen flex flex-col items-center bg-neutral-200 py-16 dark:bg-neutral-400">
+                <div class="w-full px-2">
+                    <h2 class="text-2xl px-2 font-semibold bg-neutral-100 text-[#195bbc] dark:bg-neutral-800 dark:text-[#44a8ed]">
+                        <button onclick="showAddTask()" class="rounded-lg cursor-pointer px-3  hover:bg-sky-200 duration-150 ease-in dark:hover:bg-neutral-300"><svg class="inline" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+                    <g fill-opacity="0" fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(3.55556,3.55556)"><path d="M36,12c13.255,0 24,10.745 24,24c0,13.255 -10.745,24 -24,24c-13.255,0 -24,-10.745 -24,-24c0,-13.255 10.745,-24 24,-24zM44,39c1.657,0 3,-1.343 3,-3c0,-1.657 -1.343,-3 -3,-3c-0.329,0 -2.426,0 -5,0c0,-2.574 0,-4.672 0,-5c0,-1.657 -1.343,-3 -3,-3c-1.657,0 -3,1.343 -3,3c0,0.328 0,2.426 0,5c-2.574,0 -4.671,0 -5,0c-1.657,0 -3,1.343 -3,3c0,1.657 1.343,3 3,3c0.329,0 2.426,0 5,0c0,2.574 0,4.672 0,5c0,1.657 1.343,3 3,3c1.657,0 3,-1.343 3,-3c0,-0.328 0,-2.426 0,-5c2.574,0 4.671,0 5,0z"></path></g></g>
+                    </svg>Add Task</button>
+                    </h2>
 
                 </div>
-                <div>
+                <div id="add-task" class="hidden bg-neutral-400 w-95/100 my-4 py-8 rounded-2xl dark:bg-neutral-700 dark:text-neutral-100">
+                    <label for="taskName" class="block mx-4">Task Name :<input type="text" class="block text-neutral-900 mt-2 px-2 py-1 focus:outline-none w-full bg-white rounded-md  focus:shadow-[0px_2px_10px_rgba(0,0,0,0.5)] focus:placeholder-transparent" placeholder="Enter Task Name" name="" id="taskName" required></label>
+                    <label for="taskCato" class="block mx-4">Catogory :<input type="text" class="block text-neutral-900 mt-2 px-2 py-1 focus:outline-none w-full bg-white rounded-md focus:shadow-[0px_2px_10px_rgba(0,0,0,0.5)] focus:placeholder-transparent" placeholder="Enter Catogory" name="" id="taskCato"></label>
+                    <button onclick="hideAddTask()" class="rounded-lg font-medium px-6 py-1.5 mt-6 bg-white hover:bg-neutral-500 cursor-pointer transition-all duration-200 mx-4  inline-block dark:bg-neutral-800 dark:hover:bg-neutral-950 dark:text-white">Cancel</button>
+                    <button onclick="addTask()" class="rounded-lg font-medium px-6 py-1.5 mt-6 bg-white hover:bg-neutral-500 cursor-pointer transition-all duration-200  mx-4 dark:bg-neutral-800 dark:hover:bg-neutral-950 dark:text-white">Confirm</button>
+                </div>
 
+                <div class="w-full px-4">
+                    <ul id="task-list" class="">
+                        
+                    </ul>
                 </div>
             </div>
 
