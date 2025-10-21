@@ -10,31 +10,17 @@
 </head>
 <body class="dark">
     <header class="">
-        <nav class="z-99 fixed top-0 left-0 bg-neutral-300 w-screen h-[10vh] flex justify-between items-center px-2 md:px-10 dark:bg-black dark:text-neutral-300">
-            <div class="flex">
-                <img class="w-8 inline" src="images/todo-logo.png" alt="">
+        <nav class="z-99 fixed top-0 left-0 bg-neutral-300 w-screen flex justify-between items-center px-2 md:px-10 dark:bg-black dark:text-neutral-300">
+            <div class="flex my-3">
+                <img class="w-8 inline " src="images/todo-logo.png" alt="">
                 <h1 class="text-2xl text-[#195bbc] font-semibold dark:text-[#44a8ed]">todofy</h1>
             </div>
-            <!-- <div class=" w-screen fixed -top-50 duration-200 left-auto md:bg-transparent md:w-auto md:static md:left-4">
-                <ul class="flex flex-col py-2 top-12 tracking-wider items-center md:flex md:flex-row text-lg font-medium md:gap-6 md:py-0">
-                <hr class="w-97/100 border-gray-700 border-t-[1.5px] ">
-                <li class="py-1.5 "><a class="text-[#195bbc]  duration-200 ease-in" href="#Home">Home</a></li>
-                <hr class="w-97/100 border-gray-700 border-t-[1.5px]">
-                <li class="py-1.5"><a class="hover:text-[#195bbc]" href="#About">About</a></li>
-                <hr class="w-97/100 border-gray-700 border-t-[1.5px] ">
-                <li class="py-1.5"><a class="hover:text-[#195bbc]" href="#Projects">Projects</a></li>
-                <hr class="w-97/100 border-gray-700 border-t-[1.5px] ">
-                <li class="py-1.5"><a class="hover:text-[#195bbc]" href="#Contact">Contact</a></li>
-                <hr class="w-97/100 border-gray-700 border-t-[1.5px] ">
-            </ul>
-            </div> -->
             
             <div class="md:hidden">
                 <svg class="w-8 h-8 mx-auto open text-[#195bbc] dark:text-[#44a8ed]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
 
-                <!-- <img src="icons/icons8-cross-480.png" class="close hidden"  width="32px" height="32px" alt="Close Icon"> -->
                 <svg class="w-8 h-8 close hidden text-[#195bbc] dark:text-[#44a8ed]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                 </svg>
@@ -44,15 +30,17 @@
         </nav>
 
         <main class="w-screen h-screen bg-neutral-200 md:flex">
-            <aside class="menu absolute w-full -top-50 bg-neutral-100 md:static  md:py-16 md:w-3/10 dark:bg-neutral-800">
+            <aside class="menu absolute w-full duration-500 -top-50 bg-neutral-100 md:static  md:py-16 md:w-3/10 dark:bg-neutral-800">
                 <div class="px-4">
                     <h2 class="font-medium text-lg dark:text-white">Tasks</h2>
                     <ul class="pl-2 text-neutral-800 dark:text-neutral-300">
-                        <li class="cursor-pointer"><svg class="inline" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                        <li class="cursor-pointer">
+                            <svg class="inline" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
                             <g fill-opacity="0" fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M6,4c-1.105,0 -2,0.895 -2,2v14c0,1.105 0.895,2 2,2h14c1.105,0 2,-0.895 2,-2v-14c0,-1.105 -0.896,-2 -2,-2zM19,8c0.25575,0 0.51153,0.09747 0.70703,0.29297c0.391,0.391 0.391,1.02306 0,1.41406l-7.56055,7.56055c-0.188,0.188 -0.44203,0.29297 -0.70703,0.29297c-0.265,0 -0.52003,-0.10497 -0.70703,-0.29297l-3.45313,-3.45312c-0.391,-0.391 -0.391,-1.02306 0,-1.41406c0.391,-0.391 1.02306,-0.391 1.41406,0l2.74609,2.74609l6.85352,-6.85352c0.1955,-0.1955 0.45128,-0.29297 0.70703,-0.29297zM24,8v12c0,2.209 -1.791,4 -4,4h-12c0,1.105 0.895,2 2,2h14c1.105,0 2,-0.895 2,-2v-14c0,-1.105 -0.896,-2 -2,-2z"></path></g></g>
                             </svg>Completed
                         </li>
-                        <li class="cursor-pointer"><svg class="inline" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                        <li class="cursor-pointer">
+                            <svg class="inline" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
                             <g fill-opacity="0" fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.61557,0 -12,5.38443 -12,12c0,6.61557 5.38443,12 12,12c6.61557,0 12,-5.38443 12,-12c0,-6.61557 -5.38443,-12 -12,-12zM14.00195,5.04883c0.02603,0.53237 0.46504,0.95077 0.99805,0.95117c0.53301,-0.00041 0.97202,-0.4188 0.99805,-0.95117c4.7345,0.46687 8.48625,4.21862 8.95313,8.95312c-0.53237,0.02603 -0.95077,0.46504 -0.95117,0.99805c0.00041,0.53301 0.4188,0.97202 0.95117,0.99805c-0.46687,4.7345 -4.21862,8.48625 -8.95312,8.95313c-0.02603,-0.53237 -0.46504,-0.95077 -0.99805,-0.95117c-0.53301,0.00041 -0.97202,0.4188 -0.99805,0.95117c-4.7345,-0.46687 -8.48625,-4.21862 -8.95312,-8.95312c0.53237,-0.02603 0.95077,-0.46504 0.95117,-0.99805c-0.00041,-0.53301 -0.4188,-0.97202 -0.95117,-0.99805c0.46687,-4.7345 4.21862,-8.48625 8.95312,-8.95312zM15,7c-4.418,0 -8,3.582 -8,8c0,4.418 3.582,8 8,8c4.418,0 8,-3.582 8,-8c0,-4.418 -3.582,-8 -8,-8zM15,9c0.553,0 1,0.448 1,1v4.58594l2.70703,2.70703c0.391,0.391 0.391,1.02306 0,1.41406c-0.195,0.195 -0.45103,0.29297 -0.70703,0.29297c-0.256,0 -0.51203,-0.09797 -0.70703,-0.29297l-3.29297,-3.29297v-5.41406c0,-0.552 0.447,-1 1,-1z"></path></g></g>
                             </svg>Pending
                         </li>
@@ -76,9 +64,10 @@
 
             </aside>
             <div class="w-screen min-h-screen flex flex-col items-center bg-neutral-200 py-16 dark:bg-neutral-400">
-                <div class="w-full px-2">
+                <div class="w-full px-2 md:px-6">
                     <h2 class="text-2xl px-2 font-semibold bg-neutral-100 text-[#195bbc] dark:bg-neutral-800 dark:text-[#44a8ed]">
-                        <button onclick="showAddTask()" class="rounded-lg cursor-pointer px-3  hover:bg-sky-200 duration-150 ease-in dark:hover:bg-neutral-300"><svg class="inline" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
+                        <button onclick="showAddTask()" class="rounded-lg cursor-pointer px-3  hover:bg-sky-200 duration-150 ease-in dark:hover:bg-neutral-300">
+                            <svg class="inline" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0,0,256,256">
                     <g fill-opacity="0" fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="currentColor" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(3.55556,3.55556)"><path d="M36,12c13.255,0 24,10.745 24,24c0,13.255 -10.745,24 -24,24c-13.255,0 -24,-10.745 -24,-24c0,-13.255 10.745,-24 24,-24zM44,39c1.657,0 3,-1.343 3,-3c0,-1.657 -1.343,-3 -3,-3c-0.329,0 -2.426,0 -5,0c0,-2.574 0,-4.672 0,-5c0,-1.657 -1.343,-3 -3,-3c-1.657,0 -3,1.343 -3,3c0,0.328 0,2.426 0,5c-2.574,0 -4.671,0 -5,0c-1.657,0 -3,1.343 -3,3c0,1.657 1.343,3 3,3c0.329,0 2.426,0 5,0c0,2.574 0,4.672 0,5c0,1.657 1.343,3 3,3c1.657,0 3,-1.343 3,-3c0,-0.328 0,-2.426 0,-5c2.574,0 4.671,0 5,0z"></path></g></g>
                     </svg>Add Task</button>
                     </h2>
@@ -91,10 +80,34 @@
                     <button onclick="addTask()" class="rounded-lg font-medium px-6 py-1.5 mt-6 bg-white hover:bg-neutral-500 cursor-pointer transition-all duration-200  mx-4 dark:bg-neutral-800 dark:hover:bg-neutral-950 dark:text-white">Confirm</button>
                 </div>
 
-                <div class="w-full px-4">
-                    <ul id="task-list" class="">
+                <div class="w-full px-2 py-4 md:px-6">
+                    <!-- <ul id="task-list" class="">
                         
-                    </ul>
+                    </ul> -->
+                    <table class="w-full border-collapse bg-neutral-300 text-left ">
+                        <thead>
+                            <tr>
+                                <th class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-4/10">Task Name</th>
+                                <th class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-3/10">Catogory</th>
+                                <th class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-2/10">Completed/Pending</th>
+                            </tr>
+                        </thead>
+                        <tbody id="task-list">
+                            <!-- <tr>
+                                <td class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-4/10"><input type="checkbox" name="" id="">homework</td>
+                                <td class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-3/10">School</td>
+                                <td class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-2/10">Pending</td>
+                            </tr>
+
+                            <tr>
+                                <td class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-4/10"><input type="checkbox" name="" id="">homework</td>
+                                <td class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-3/10">School</td>
+                                <td class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-2/10">Pending</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+
+
                 </div>
             </div>
 
