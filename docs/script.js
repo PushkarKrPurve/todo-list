@@ -2,7 +2,8 @@ const menu = document.querySelector('.menu');
 const open = document.querySelector('.open');
 const close = document.querySelector('.close');
 const addTaskSection = document.getElementById('add-task');
-
+const themeToggle = document.getElementById('theme-toggle');
+const taskList = document.getElementById('task-list')
 open.addEventListener('click',()=>{
     menu.classList.remove('-top-50');
     menu.classList.add("top-[56px]");
@@ -33,7 +34,7 @@ function addTask(){
     document.getElementById('taskCato').value = ''
     // console.log(taskName);
     // console.log(cato);
-    const taskList = document.getElementById('task-list')
+    
     if (taskName){
         if (!cato){
             cato = 'Nil'
@@ -47,7 +48,9 @@ function addTask(){
         taskList.insertAdjacentHTML('afterend', newTask);
 
     }
+    saveTaskList()
     taskListupdate()
+    
     
 }
 function taskListupdate(){
@@ -76,5 +79,42 @@ function checked(event){
         progress.textContent = "Pending"
     }
 }
+const currentTheme = localStorage.getItem('theme') || 'dark';
+if (currentTheme === 'light') {
+    document.body.classList.remove('dark');
+    themeToggle.innerHTML = '<img class="w-15" src="images/light-theme-logo.png" alt=""></img>';
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const isdark = document.body.classList.contains('dark');
+    localStorage.setItem('theme', isdark ? 'dark' : 'light');
+    // themeToggle.classList.add('rotate-360');
+    themeToggle.innerHTML = isdark ? '<img class="w-10" src="images/dark-theme-logo.png" alt="">' : '<img class="w-15" src="images/light-theme-logo.png" alt="">';
+});
+
+
+function saveTaskList() {
+    const tableData = taskList.innerHTML;
+    console.log(tableData);
+    localStorage.setItem("tableData", tableData);
+
+  }
+
+  function loadTaskList() {
+    const savedData = localStorage.getItem("tableData");
+    
+    if (savedData) {
+      document.getElementById("task-list").innerHTML = savedData;
+    //   alert("Table data loaded!");
+    } else {
+    //   alert("No table data found in localStorage.");
+    }
+    taskListupdate()
+}
+
+  window.addEventListener("DOMContentLoaded", () => {
+    loadTaskList();
+  });
 
 taskListupdate()
