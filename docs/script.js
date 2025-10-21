@@ -45,13 +45,11 @@ function addTask(){
             <td class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-3/10">${cato}</td>
             <td class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-2/10">Pending</td>
         </tr>`
-        taskList.insertAdjacentHTML('afterend', newTask);
+        taskList.insertAdjacentHTML('afterbegin', newTask);
 
     }
     saveTaskList()
     taskListupdate()
-    
-    
 }
 function taskListupdate(){
     const checkbox = document.querySelectorAll('table input[type="checkbox"]')
@@ -62,9 +60,10 @@ function taskListupdate(){
 
 function checked(event){
     const box = event.target
-    console.log(box);
-    
     if (box.checked){
+        console.log(box);
+        box.setAttribute('checked', '')
+        
         let task = box.parentElement
         // let tcato = task.nextElementSibling
         task.classList.add('line-through')
@@ -72,12 +71,14 @@ function checked(event){
         progress.textContent = "Completed"
     }
     if(!box.checked){
+        box.removeAttribute('checked')
         let task = box.parentElement
         // let tcato = task.nextElementSibling
         let progress = box.parentElement.nextElementSibling.nextElementSibling
         task.classList.remove('line-through')
         progress.textContent = "Pending"
     }
+    saveTaskList()
 }
 const currentTheme = localStorage.getItem('theme') || 'dark';
 if (currentTheme === 'light') {
@@ -95,20 +96,15 @@ themeToggle.addEventListener('click', () => {
 
 
 function saveTaskList() {
-    const tableData = taskList.innerHTML;
-    console.log(tableData);
-    localStorage.setItem("tableData", tableData);
-
+    const taskData = taskList.innerHTML;
+    localStorage.setItem("taskData", taskData);
   }
 
   function loadTaskList() {
-    const savedData = localStorage.getItem("tableData");
+    const savedData = localStorage.getItem("taskData");
     
     if (savedData) {
       document.getElementById("task-list").innerHTML = savedData;
-    //   alert("Table data loaded!");
-    } else {
-    //   alert("No table data found in localStorage.");
     }
     taskListupdate()
 }
