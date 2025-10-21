@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="output.css">
     <link rel="icon" href="images/android-chrome-512x512.png" type="image/x-icon">
     <script src="script.js" defer></script>
-    <title>TO DO LIST</title>
+    <title>todofy</title>
 </head>
-<body class="dark">
+<body class="dark overflow-x-hidden">
     <header class="">
         <nav class="z-99 fixed top-0 left-0 bg-neutral-300 w-screen flex justify-between items-center px-2 md:px-10 dark:bg-black dark:text-neutral-300">
             <div class="flex my-3">
@@ -33,8 +33,8 @@
 
         </nav>
 
-        <main class="w-screen h-screen bg-neutral-200 md:flex">
-            <aside class="menu absolute w-full duration-500 -top-50 bg-neutral-100 md:static  md:py-16 md:w-3/10 dark:bg-neutral-800">
+        <main class="w-screen min-h-screen bg-neutral-200 md:flex">
+            <aside class="menu absolute w-full duration-500 -top-50 bg-neutral-100 md:static  md:py-16 md:px-4 md:w-3/10 dark:bg-neutral-800">
                 <div class="px-4">
                     <h2 class="font-medium text-lg dark:text-white">Tasks</h2>
                     <ul class="pl-2 text-neutral-800 dark:text-neutral-300">
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="w-full px-2 py-4 md:px-6">
-                    <table class="w-full border-collapse bg-neutral-300 text-left ">
+                    <table class="w-full border-collapse bg-neutral-300 text-left dark:bg-neutral-500 dark:text-white">
                         <thead>
                             <tr>
                                 <th class="border border-gray-400 py-1 leading-loose px-1 md:px-4 w-4/10">Task Name</th>
